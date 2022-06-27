@@ -1222,3 +1222,11 @@ Identify and stop the process that's listening on port 8099 or configure this ap
 2022-06-27 20:47:45.999  INFO 48032 --- [http-nio-8099-exec-2] c.e.s.controller.StudentController       : Student Request StudentRequest [studentName=test, course=IT, isLanguageKnown=false, gender=male, dateOfBirth=Sat Jun 04 05:30:00 IST 2022]
 2022-06-27 20:47:46.000  INFO 48032 --- [http-nio-8099-exec-2] c.e.s.controller.StudentController       : start add student in controller for Student : test
 2022-06-27 20:47:46.069  INFO 48032 --- [http-nio-8099-exec-2] c.e.s.controller.StudentController       : end add student in controller for Student : test
+2022-06-27 20:54:09.615  INFO 48032 --- [http-nio-8099-exec-5] c.e.s.controller.StudentController       : Student Request StudentRequest [studentName=test, course=SpringBoot, isLanguageKnown=false, gender=male, dateOfBirth=Thu Jun 02 05:30:00 IST 2022]
+2022-06-27 20:54:09.617  INFO 48032 --- [http-nio-8099-exec-5] c.e.s.controller.StudentController       : start add student in controller for Student : test
+2022-06-27 20:54:09.619  INFO 48032 --- [http-nio-8099-exec-5] c.e.s.controller.StudentController       : end add student in controller for Student : test
+2022-06-27 20:54:18.156  INFO 48032 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2022-06-27 20:54:18.852  INFO 48032 --- [RMI TCP Connection(2)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-27 20:54:18.853  INFO 48032 --- [RMI TCP Connection(2)-127.0.0.1] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2022-06-27 20:54:19.057  INFO 48032 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-06-27 20:54:19.059  INFO 48032 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

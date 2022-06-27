@@ -45,6 +45,7 @@
 		
 		         document.getElementById("studentName").value = studentName;
 		         document.getElementById("course").value = course;
+		         document.getElementById('hide').style.display='block';
 		         document.querySelector('input[name="gender"]:checked').value = gender;
 		         document.querySelector('input[name="languageKnown"]:checked').value = isLaguageKnows;
 		         document.getElementById("dateOfBirth").value = dateOfBirth;
@@ -63,8 +64,10 @@
 </head>
 <body>
 
-	<h6>Student Management System</h6>
-
+	<h1>Student Management System</h1>
+	<br><br>
+	<div id="hide" style="display:none">Student Creation Failure</div>
+	<br><br>
 	<form method="POST" id="myForm" onsubmit="return myFunction();">
 
 		<table>
@@ -78,9 +81,9 @@
 			<tr>
 				<td>Course :</td>
 				<td><select id="course" name="course">
-						<option value="IT">IT</option>
-						<option value="MIT">MIT</option>
-						<option value="ML">ML</option>
+						<option value="SpringBoot">Spring Boot</option>
+						<option value="RestAPI">Rest API</option>
+						<option value="Microservices">Microservices</option>
 				</select></td>
 			</tr>
 
