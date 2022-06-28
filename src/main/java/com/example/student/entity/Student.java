@@ -17,7 +17,7 @@ public class Student {
 	private int id;
 	private String studentName;
 	private String course;
-	private boolean isLanguageKnown;
+	private String languageKnown;
 	private String gender;
 	private Date dateOfBirth;
 	
@@ -25,10 +25,10 @@ public class Student {
 		
 	}
 	
-	public Student(String studentName, String course, boolean isLanguageKnown, String gender, Date dateOfBirth) {
+	public Student(String studentName, String course, String languageKnown, String gender, Date dateOfBirth) {
 		this.studentName = studentName;
 		this.course = course;
-		this.isLanguageKnown = isLanguageKnown;
+		this.languageKnown = languageKnown;
 		this.gender = gender;
 		this.dateOfBirth = dateOfBirth;
 	}
@@ -53,12 +53,15 @@ public class Student {
 	public void setCourse(String course) {
 		this.course = course;
 	}
-	public boolean isLanguageKnown() {
-		return isLanguageKnown;
+	
+	public String getLanguageKnown() {
+		return languageKnown;
 	}
-	public void setLanguageKnown(boolean isLanguageKnown) {
-		this.isLanguageKnown = isLanguageKnown;
+
+	public void setLanguageKnown(String languageKnown) {
+		this.languageKnown = languageKnown;
 	}
+
 	public String getGender() {
 		return gender;
 	}

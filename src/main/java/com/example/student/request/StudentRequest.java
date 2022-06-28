@@ -14,7 +14,7 @@ public class StudentRequest {
 	@NotBlank
 	private String course;
 	@NotNull
-	private boolean isLanguageKnown;
+	private String languageKnown;
 	@NotBlank
 	private String gender;
 	@Past
@@ -33,11 +33,12 @@ public class StudentRequest {
 	public void setCourse(String course) {
 		this.course = course;
 	}
-	public boolean isLanguageKnown() {
-		return isLanguageKnown;
+	
+	public String getLanguageKnown() {
+		return languageKnown;
 	}
-	public void setLanguageKnown(boolean isLanguageKnown) {
-		this.isLanguageKnown = isLanguageKnown;
+	public void setLanguageKnown(String languageKnown) {
+		this.languageKnown = languageKnown;
 	}
 	public String getGender() {
 		return gender;
@@ -54,7 +55,7 @@ public class StudentRequest {
 	@Override
 	public String toString() {
 		return "StudentRequest [studentName=" + studentName + ", course=" + course + ", isLanguageKnown="
-				+ isLanguageKnown + ", gender=" + gender + ", dateOfBirth=" + dateOfBirth + "]";
+				+ languageKnown + ", gender=" + gender + ", dateOfBirth=" + dateOfBirth + "]";
 	}
 	
 	

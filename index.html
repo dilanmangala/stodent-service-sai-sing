@@ -11,12 +11,12 @@
 		
 		studentName = document.getElementById("studentName").value;
 		course = document.getElementById("course").value;
-		isLaguageKnows = document.querySelector('input[name="languageKnown"]:checked').value;
+		languageKnown = document.querySelector('input[name="languageKnown"]:checked').value;
 		gender = document.querySelector('input[name="gender"]:checked').value;
 		dateOfBirth = document.getElementById("dateOfBirth").value;
 		console.log(studentName);
 		console.log(course);
-		console.log(isLaguageKnows);
+		console.log(languageKnown);
 		console.log(gender);
 		console.log(dateOfBirth);
 
@@ -28,7 +28,7 @@
 		  body: JSON.stringify({
 				studentName: studentName,
 				course: course,
-				isLaguageKnows: isLaguageKnows,
+				languageKnown: languageKnown,
 				gender: gender,
 				dateOfBirth: dateOfBirth
 			 }),
@@ -47,7 +47,7 @@
 		         document.getElementById("course").value = course;
 		         document.getElementById('hide').style.display='block';
 		         document.querySelector('input[name="gender"]:checked').value = gender;
-		         document.querySelector('input[name="languageKnown"]:checked').value = isLaguageKnows;
+		         document.querySelector('input[name="languageKnown"]:checked').value = languageKnown;
 		         document.getElementById("dateOfBirth").value = dateOfBirth;
 		         
 		   });
