@@ -1,0 +1,127 @@
+<html>
+<head>
+
+<title>Student System</title>
+
+<script type="text/javascript">
+		
+	function sendDate(){
+		console.log("start");
+		var api_url = "http://localhost:8099/student/addStudent";
+		
+		studentName = document.getElementById("studentName").value;
+		course = document.getElementById("course").value;
+		languageKnown = document.querySelector('input[name="languageKnown"]:checked').value;
+		gender = document.querySelector('input[name="gender"]:checked').value;
+		dateOfBirth = document.getElementById("dateOfBirth").value;
+		console.log(studentName);
+		console.log(course);
+		console.log(languageKnown);
+		console.log(gender);
+		console.log(dateOfBirth);
+
+		fetch(api_url, {
+		  method: 'POST', // or 'PUT'
+		  headers: {
+		 				'Content-Type': 'application/json',
+		           },
+		  body: JSON.stringify({
+				studentName: studentName,
+				course: course,
+				languageKnown: languageKnown,
+				gender: gender,
+				dateOfBirth: dateOfBirth
+			 }),
+		})
+		  .then(response => {
+			  
+			  if (!response.ok) {
+		            throw Error(data);
+		           
+		        }
+			  window.location = './Success.html';
+		  })
+		 .catch((error) => {
+		
+		         document.getElementById("studentName").value = studentName;
+		         document.getElementById("course").value = course;
+		         document.getElementById('hide').style.display='block';
+		         document.querySelector('input[name="gender"]:checked').value = gender;
+		         document.querySelector('input[name="languageKnown"]:checked').value = languageKnown;
+		         document.getElementById("dateOfBirth").value = dateOfBirth;
+		         
+		   });
+		
+		console.log("end");
+	}
+	
+	function myFunction(){
+		   return false;
+		}
+	
+	</script>
+
+</head>
+<body>
+
+	<h1>Student Management System</h1>
+	<br><br>
+	<div id="hide" style="display:none">Student Creation Failure</div>
+	<br><br>
+	<form method="POST" id="myForm" onsubmit="return myFunction();">
+
+		<table>
+			<tr>
+				<td>
+			<tr>
+				<td>Name :</td>
+				<td><input id="studentName" type="text" name="studentName">
+				</td>
+			</tr>
+			<tr>
+				<td>Course :</td>
+				<td><select id="course" name="course">
+						<option value="SpringBoot">Spring Boot</option>
+						<option value="RestAPI">Rest API</option>
+						<option value="Microservices">Microservices</option>
+				</select></td>
+			</tr>
+
+			<tr>
+				<td>Language Known :</td>
+				<td><label> <input id="lang-1" type="checkbox" class="radio"
+						value="English" name="languageKnown" />English
+				</label> <label> <input id="lang-2" type="checkbox" class="radio" value="Hindi"
+						name="languageKnown" />Hindi
+				</label> <label> <input id="lang-3" type="checkbox" class="radio" value="Telungu"
+						name="languageKnown" />Telungu
+				</label></td>
+			</tr>
+
+			<tr>
+				<td>Gender :</td>
+				<td><label> <input type="radio" class="radio" value="male"
+						name="gender" />Male
+				</label> <label> <input type="radio" class="radio" value="female"
+						name="gender" />Female
+				</label></td>
+			</tr>
+
+			<tr>
+				<td>Date Of Birth :</td>
+				<td><input type="date" id="dateOfBirth" name="dateOfBirth"></td>
+			</tr>
+
+			<tr>
+				<td><button onclick="sendDate()">Submit</button></td>
+			</tr>
+		</table>
+	</form>
+
+
+
+</body>
+
+
+
+</html>
